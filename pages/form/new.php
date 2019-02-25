@@ -1,8 +1,6 @@
 <?php
-
-use Source\Database\Connect;
 define("BASE", "http://localhost/estudo/RedBelt");
-
+require __DIR__ . "/../../source/autoload.php";
 ?>
 <!doctype html>
 <html lang="pt-BR">

@@ -29,7 +29,6 @@ define("BASE", "http://localhost/estudo/RedBelt");
     $getUpdate = filter_input(INPUT_GET, 'update', FILTER_VALIDATE_BOOLEAN);
     $getDelete = filter_input(INPUT_GET, 'delete', FILTER_VALIDATE_BOOLEAN);
     $getId = filter_input(INPUT_GET, 'id', FILTER_VALIDATE_INT);
-    var_dump($getDelete, $getId);
 
     if ($getNew) {
         $getData = filter_input_array(INPUT_POST, FILTER_DEFAULT);
