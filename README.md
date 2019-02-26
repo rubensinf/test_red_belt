@@ -20,6 +20,7 @@ More infos:
 - Metodo setData() para varrer os dados e limpar possíveis códigos maliciosos;
 - Filtro de dados feito através de filter_input e filter_input_array
 - Front-end desenvolvido com auxilio do Bootstrap 4;
+- Banco de dados MySQL (MariaDB)
 
 
 INSTRUÇÕES:
