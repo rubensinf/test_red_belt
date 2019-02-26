@@ -11,12 +11,19 @@ namespace Source\Classes;
 use Source\Database\Connect;
 
 
+/**
+ * Class Incidents
+ * @package Source\Classes
+ */
 class Incidents
 {
     private $Data;
     private $IncidentId;
     private $Error;
 
+    /**
+     * @param array $data
+     */
     public function exeCreate(array $data)
     {
         $this->Data = $data;
@@ -29,6 +36,10 @@ class Incidents
         }
     }
 
+    /**
+     * @param $id
+     * @param array $data
+     */
     public function exeUpdate($id, array $data)
     {
         $this->IncidentId = (int)$id;
@@ -42,6 +53,9 @@ class Incidents
         }
     }
 
+    /**
+     * @param $id
+     */
     public function exeDelete($id)
     {
         $this->IncidentId = (int)$id;
@@ -71,12 +85,18 @@ class Incidents
      * PRIVATES METHODS
      */
 
+    /**
+     * Varre o array para remover possiveis códigos malciciosos
+     */
     private function setData()
     {
         $this->Data = array_map('strip_tags', $this->Data);
         $this->Data = array_map('trim', $this->Data);
     }
 
+    /**
+     * Registra um novo incidente
+     */
     private function create()
     {
         $this->Data['status_id'] = 1;
@@ -91,6 +111,9 @@ class Incidents
         }
     }
 
+    /**
+     * Atualiza um incidente
+     */
     private function update()
     {
         $stmt = Connect::getInstance()->prepare("UPDATE incidents SET title = :title,

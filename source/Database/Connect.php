@@ -49,6 +49,9 @@ class Connect
     }
 
 
+    /*
+     * Impede o polimorfismo caso a class seja herdada por outra class
+     */
     final private function __construct()
     {
     }
