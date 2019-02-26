@@ -15,6 +15,7 @@ More infos:
 
 - CRUD desenvolvido utilizando PHP OO;
 - Conexão com o banco de dados utilizando PDO;
+- Utilização de 'Binds' para INSERT / UPDATE / DELETE
 - Metodo setData() para varrer os dados e limpar possíveis códigos maliciosos;
 - Filtro de dados feito através de filter_input e filter_input_array
 - Front-end desenvolvido com auxilio do Bootstrap 4;
